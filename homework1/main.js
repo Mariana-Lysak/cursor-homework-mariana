@@ -38,6 +38,7 @@ console.log("The rounded sum of prices:",roundedSum);
 const isEven= (sumIntegerPrices%2 === 0) ? "even" : "odd";
 console.log("The sum of prices is:",isEven);
 
+
 //Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
 const payment=500;
 const rest=payment - sumOfPrices;
