@@ -35,9 +35,8 @@ const roundedSum= Math.round(sumIntegerPrices/100)*100;
 console.log("The rounded sum of prices:",roundedSum);
 
 //Виведіть булеве значення: чи є сума всіх товарів (округлена в меншу сторону) парним чи непарним числом?
-const isEven= (sumIntegerPrices%2 === 0) ? "even" : "odd";
-console.log("The sum of prices is:",isEven);
-
+const isEven= sumIntegerPrices % 2;
+console.log(`The sum of prices is: ${isEven ? 'odd':'even'} number`);
 
 //Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
 const payment=500;
@@ -45,20 +44,20 @@ const rest=payment - sumOfPrices;
 console.log ("The rest:", rest);
 
 //Виведіть середнє значення цін, округлене до другого знаку після коми
-const averagePrice=(sumOfPrices/3).toFixed(2);
-console.log("The average price:",+averagePrice);
+const averagePrice=+((sumOfPrices/3).toFixed(2));
+console.log("The average price:",averagePrice);
 
 //(Більш складне) Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random)
 const discount=Math.random()*sumOfPrices;
 console.log("Discount:", discount);
 
 //Зробіть клієнту випадкову знижку та виведіть суму до оплати округлену до 2 знаків після коми. 
-const pay= (sumOfPrices-discount).toFixed(2);
-console.log("Price with discount:",+pay);
+const totalSumForPayment= +((sumOfPrices-discount).toFixed(2));
+console.log("Price with discount:", totalSumForPayment);
 
 //Виведіть чистий прибуток, якщо клієнт заплатив зі знижкою та собівартість товарів рівно в два рази нижче їх ціни? 
-const profit=((sumOfPrices/2)-discount).toFixed(2);
-console.log("Profit:",+profit);
+const profit=+(((sumOfPrices/2)-discount).toFixed(2));
+console.log("Profit:",profit);
 
 
 
@@ -72,7 +71,7 @@ The rounded sum of prices: ${roundedSum},
 The sum of prices is ${isEven},
 The sum of prices is ${isEven},
 The rest ${rest},
-The average price ${+averagePrice},
+The average price ${averagePrice},
 Discount ${discount},
-Price with discount ${+pay},
+Price with discount ${totalSumForPayment},
 Profit ${+profit}`);
