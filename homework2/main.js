@@ -2,12 +2,12 @@ let numberN;
 let numberM;
 
 do {
-    numberN= prompt('Write a first number, please:');
+    numberN= prompt('Enter first number, please:');
     numberN= parseInt(numberN);
 } while (isNaN(numberN));
 
 do {
-    numberM= prompt('Write a second number, please:');
+    numberM= prompt('Enter second number, please:');
     numberM= parseInt(numberM);
 } while (isNaN(numberM));
 
