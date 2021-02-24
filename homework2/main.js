@@ -16,7 +16,7 @@ maxNumberM=Math.max(numberN, numberM);
 
 console.log (minNumberN, maxNumberM);
 
-const skipEvenNumbers= confirm ('Skip odd numbers?');
+const skipEvenNumbers= confirm ('Skip even numbers?');
 console.log('%c%s', 'color: grey; font: 0,5rem/1 Arial;',skipEvenNumbers ? 'true' : 'false');
 
 let sumOfNumbers;
