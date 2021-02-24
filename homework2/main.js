@@ -21,7 +21,7 @@ console.log('%c%s', 'color: grey; font: 0,5rem/1 Arial;',skipEvenNumbers ? 'true
 
 let sumOfNumbers;
 
-for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
+/*for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
     if (skipEvenNumbers) {
         if (minNumberN%2 == 0) {
             continue;
@@ -31,14 +31,14 @@ for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
     } else {
         sumOfNumbers+=minNumberN
     }
-};
+};*/
 
-/*for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
+for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
     if (skipEvenNumbers && (minNumberN%2 == 0) ) {
             continue;
+    } else {
+        sumOfNumbers+=minNumberN
     }
-
-    sumOfNumbers+=minNumberN
-};*/
+};
 
 console.log('%c%s', 'color: red; font: 1.2rem/1 Tahoma;', sumOfNumbers);
