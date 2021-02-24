@@ -22,10 +22,14 @@ console.log('%c%s', 'color: grey; font: 0,5rem/1 Arial;',skipEvenNumbers ? 'true
 let sumOfNumbers;
 
 for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
-    if (skipEvenNumbers && (minNumberN%2 == 0) {
-        continue;
+    if (skipEvenNumbers) {
+        if (minNumberN%2 == 0) {
+            continue;
+        } else {
+            sumOfNumbers+=minNumberN;
+        }
     } else {
-        sumOfNumbers+=minNumberN;
+        sumOfNumbers+=minNumberN
     }
 };
 
