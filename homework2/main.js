@@ -2,12 +2,12 @@ let numberN;
 let numberM;
 
 do {
-    numberN= prompt('Enter first number, please:');
+    numberN= +(prompt('Enter first number, please:'));
     numberN= parseInt(numberN);
 } while (isNaN(numberN));
 
 do {
-    numberM= prompt('Enter second number, please:');
+    numberM= +(prompt('Enter second number, please:'));
     numberM= parseInt(numberM);
 } while (isNaN(numberM));
 
@@ -32,5 +32,13 @@ for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
         sumOfNumbers+=minNumberN
     }
 };
+
+/*for(sumOfNumbers=0; minNumberN<=maxNumberM;minNumberN++) {
+    if (skipEvenNumbers && (minNumberN%2 == 0) ) {
+            continue;
+    }
+
+    sumOfNumbers+=minNumberN
+};*/
 
 console.log('%c%s', 'color: red; font: 1.2rem/1 Tahoma;', sumOfNumbers);
