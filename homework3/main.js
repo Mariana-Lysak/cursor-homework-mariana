@@ -92,7 +92,7 @@ function getRandomPassword (len = 8) {
     let password = '';
 
     for (let i = 0; i < len; i++) {
-        password += Math.floor(Math.random()*len);
+        password += Math.floor(Math.random()*10);
     }
 
     return password
