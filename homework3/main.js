@@ -1,9 +1,5 @@
 //1
-function getMaxDigit(number) {
-    const numbersArray= number.toString();
-
-    return Math.max(...numbersArray);
-}
+const getMaxDigit= (number) => Math.max(...number.toString());
 
 
 //2
@@ -35,20 +31,16 @@ function getSalary(sum) {
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
-//6 не працює(((((
-
+//6
 function countLetter (char, word) {
     let count = 0;
 
-    for (let i = 0; i < word.lenght; i++) {
+    for (let i = 0; i < word.length; i++) {
         if (word.charAt(i).toLowerCase() === char.toLowerCase()) count++;
     }
 
     return count
 }
-
-const letter= countLetter ('a', 'blablabla')
-console.log(letter);
 
 
 //7 
@@ -89,5 +81,6 @@ console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №2: 
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №3: ${formatName('maRcO')}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №4: ${getSalary(1000)}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №5: ${getRandomNumber (1, 8)}`);
+console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №6: ${countLetter ('a', 'blablabla')}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №7: ${calcCurrency ('100UaN')}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №8: ${getRandomPassword (4)}`);
