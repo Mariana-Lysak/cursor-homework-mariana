@@ -54,13 +54,13 @@ function calcCurrency (currency) {
         return +currency*currencyRate;
     }
 
-    if (upperCurrency.endsWith('UAN')) {
+    if (upperCurrency.endsWith('UAH')) {
         currency = parseInt(currency);
 
         return currency/currencyRate;
     }
 
-    console.error('Please, input only $ or UAN');
+    console.error('Please, input only $ or UAH');
 
     }
 
@@ -82,5 +82,5 @@ console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №3: 
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №4: ${getSalary(1000)}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №5: ${getRandomNumber (1, 8)}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №6: ${countLetter ('a', 'blablabla')}`);
-console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №7: ${calcCurrency ('100UaN')}`);
+console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №7: ${calcCurrency ('100UAh')}`);
 console.log('%c%s', 'color: white; font: 1rem/1 Tahoma;',` Функція №8: ${getRandomPassword (4)}`);
