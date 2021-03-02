@@ -19,15 +19,6 @@ function pow(x, n) {
 
 
 //3
-/*function formatName(name) {
-   const correctName = name[0].toUpperCase() + name.slice(1).toLowerCase();
-
-    return correctName
-}
-
-const name= formatName('maRcO');
-console.log(name);*/
-
 const formatName = (name) => name[0].toUpperCase() + name.slice(1).toLowerCase();
 
 
@@ -41,11 +32,6 @@ function getSalary(sum) {
 
 
 //5
-/*function getRandomNumber (min, max) {
-    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
-
-    return randomNumber
-}*/
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
