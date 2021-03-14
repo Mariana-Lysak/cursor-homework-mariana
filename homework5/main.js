@@ -38,4 +38,4 @@ console.log ('Numbers divided by five:', getDividedByFive(6, 2, 55, 11, 78, 2, 5
 const replaceBadWords = (string) => string.split(' ').map((word) =>
 word.replace('fuck', '****').replace('shit', '****')).join(' ');
 
-console.log('Replace bad words:', replaceBadWords("Are you fucking kidding?"))
+console.log('Replace bad words:', replaceBadWords("Are you fucking kidding?")) 
