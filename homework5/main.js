@@ -15,21 +15,21 @@ console.log('Average number:', getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 2
 
 //5 
 const filterEvenNumbers = (...numbers) =>
-numbers.filter((number) => number % 2 != 0);
+numbers.filter(number => number % 2 != 0);
 
 console.log('Odd numbers:', filterEvenNumbers(1, 2, 3, 4, 5, 6));
 
 
 //6 
 const countPositiveNumbers = (...numbers) =>
-numbers.filter((number) => number > 0);
+numbers.filter(number => number > 0);
 
 console.log('Positive numbers:', countPositiveNumbers(1, -2, 3, -4, -5, 6));
 
 
 //7 
 const getDividedByFive = (...numbers) =>
-numbers.filter((number) => number % 5 === 0);
+numbers.filter(number => number % 5 === 0);
 
 console.log ('Numbers divided by five:', getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
