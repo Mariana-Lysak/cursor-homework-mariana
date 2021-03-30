@@ -25,3 +25,49 @@ const students = [{
   }
 ];
 
+
+//1
+const getSubjects = student => Object.keys(student.subjects).map(subject => 
+  subject[0].toUpperCase() + subject.slice(1).replace('_', ' '));
+
+console.log ( getSubjects(students[0]) );
+
+
+//2
+const getAverageMark = student => {
+  const studentMarks = Object.values(student.subjects).flat()
+  return (studentMarks.reduce((a, b) => a + b) / studentMarks.length).toFixed(2);
+}
+
+console.log ( getAverageMark(students[0]));
+
+
+//3
+const getStudentInfo = student => ({ 
+  course: student.course,
+  name: student.name,
+  averageMark: getAverageMark(student),
+});
+
+console.log ( getStudentInfo(students[0]) );
+
+//4
+const getStudentsNames = students =>
+students.map(student => student.name).sort();
+
+console.log (getStudentsNames(students));
+
+//5
+const getBestStudent = students => {
+  studentsMarks = students.map(student => +(getAverageMark(student)));
+  return students[studentsMarks.indexOf(Math.max(...studentsMarks))].name;
+}
+
+console.log (getBestStudent(students));
+
+
+//6
+const calculateWordLetters = word =>
+word.split('').reduce((letter, i) => (letter[i] = (letter[i] || 0) + 1, letter), {})
+
+console.log (calculateWordLetters("тест"));
