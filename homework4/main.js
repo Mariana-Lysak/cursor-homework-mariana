@@ -60,7 +60,7 @@ function getRandomMarks() {
 
 
     for ( i = 0; i < themesForStudents.length; i++ ) {
-        randomMark = Math.floor(Math.random() * 5) + 1;
+        randomMark = Math.ceil(Math.random() * 5);
         newMarks.push([themesForStudents[i].concat(randomMark)]);
     }
 
