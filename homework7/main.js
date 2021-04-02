@@ -28,7 +28,7 @@ function getMyTaxes (salary) {
 getMyTaxes.call(ukraine, 10000);
 
 //2
-function getMiddleTaxes () {
+function getMiddleTaxes (country) {
     const middleTaxes = this.tax * this.middleSalary;
     console.log(`The payroll tax on the middle salary is: ${middleTaxes}`)
 }
@@ -50,12 +50,10 @@ getTotalTaxes.call(litva);
 //4
 
 function getMySalary() {
-
     const minSalary = 1500;
     const maxSalary = 2000;
-
     const salary = Math.round(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
-    const taxes = this.tax * salary;
+    const taxes = +(this.tax * salary).toFixed(2);
     const profit = salary - taxes;
 
     setInterval(() => {
