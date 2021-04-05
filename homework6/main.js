@@ -30,7 +30,7 @@ const students = [{
 const getSubjects = student => Object.keys(student.subjects).map(subject => 
   subject[0].toUpperCase() + subject.slice(1).replace('_', ' '));
 
-console.log ( getSubjects(students[0]) );
+console.log ('Список предметів студента:', getSubjects(students[0]) );
 
 
 //2
@@ -39,7 +39,7 @@ const getAverageMark = student => {
   return (studentMarks.reduce((a, b) => a + b) / studentMarks.length).toFixed(2);
 }
 
-console.log ( getAverageMark(students[0]));
+console.log ('Середня оцінка по усім предметам:', getAverageMark(students[0]));
 
 
 //3
@@ -49,13 +49,13 @@ const getStudentInfo = student => ({
   averageMark: getAverageMark(student),
 });
 
-console.log ( getStudentInfo(students[0]) );
+console.log ('Інформація загального виду по переданому студенту:', getStudentInfo(students[0]) );
 
 //4
 const getStudentsNames = students =>
 students.map(student => student.name).sort();
 
-console.log (getStudentsNames(students));
+console.log ('Iмена студентів у алфавітному порядку:', getStudentsNames(students));
 
 //5
 const getBestStudent = students => {
@@ -63,11 +63,11 @@ const getBestStudent = students => {
   return students[studentsMarks.indexOf(Math.max(...studentsMarks))].name;
 }
 
-console.log (getBestStudent(students));
+console.log ('Кращий студент зі списку по показнику середньої оцінки:', getBestStudent(students));
 
 
 //6
 const calculateWordLetters = word =>
 word.split('').reduce((letter, i) => (letter[i] = (letter[i] || 0) + 1, letter), {})
 
-console.log (calculateWordLetters("тест"));
+console.log ('Обєкт, в якому ключі це букви у слові, а значення – кількість їх повторень:', calculateWordLetters("тест"));
