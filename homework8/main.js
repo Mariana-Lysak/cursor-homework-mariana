@@ -11,7 +11,6 @@ class Student {
         if(!this.isActiveStudent) {
             return null;
         }
-
         return `"Студент ${this.course}го курсу ${this.university}, ${this.fullName}"`;
     }
 
@@ -23,7 +22,6 @@ class Student {
         if(!this.isActiveStudent) {
             return null;
         }
-        
         return this.marks = [...this.marks, mark];
     }
 
@@ -31,7 +29,6 @@ class Student {
         if(!this.isActiveStudent) {
             return null;
         }
-
         const allMarks = this.marks.reduce((sum, mark) => sum + mark, 0);
         return +(allMarks / this.marks.length).toFixed(1);
     }
