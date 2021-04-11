@@ -21,31 +21,28 @@ const litva = {
 
 //1
 function getMyTaxes (salary) {
-    const myTaxes = this.tax * salary;
-    console.log(`The payroll tax will be: ${myTaxes}`)
+    return this.tax * salary;
 }
 
-getMyTaxes.call(ukraine, 10000);
+console.log('The payroll tax in Ukraine will be:', getMyTaxes.call(ukraine, 10000));
 
 //2
 function getMiddleTaxes (country) {
-    const middleTaxes = this.tax * this.middleSalary;
-    console.log(`The payroll tax on the middle salary is: ${middleTaxes}`)
+    return this.tax * this.middleSalary;
 }
 
-getMiddleTaxes.call(ukraine);
-getMiddleTaxes.call(latvia);
-getMiddleTaxes.call(litva);
+console.log('The payroll tax on the middle salary in Ukraine is:', getMiddleTaxes.call(ukraine));
+console.log('The payroll tax on the middle salary in Latvia is:',getMiddleTaxes.call(latvia));
+console.log('The payroll tax on the middle salary in Litva is:',getMiddleTaxes.call(litva));
 
 //3
 function getTotalTaxes () {
-    const totalTaxes = this.tax * this.middleSalary * this.vacancies;
-    console.log(`The total payroll tax is: ${totalTaxes}`)
+    return this.tax * this.middleSalary * this.vacancies;  
 }
 
-getTotalTaxes.call(ukraine);
-getTotalTaxes.call(latvia);
-getTotalTaxes.call(litva);
+console.log('The total payroll tax in Ukraine is:', getTotalTaxes.call(ukraine));
+console.log('The total payroll tax in Latvia is:', getTotalTaxes.call(latvia));
+console.log('The total payroll tax in Litva is:', getTotalTaxes.call(litva));
 
 //4
 
