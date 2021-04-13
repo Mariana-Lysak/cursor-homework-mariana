@@ -1,6 +1,5 @@
-
 function generateBlocks() {
-    const square = document.body.insertAdjacentHTML('afterbegin', '<div style = "width:250px;">' +
+    document.body.insertAdjacentHTML('afterbegin', '<div style = "width:250px;">' +
     '<div class="square"></div>'.repeat(25) + '</div>');
 
     document.querySelectorAll('.square').forEach(element => {
@@ -14,7 +13,7 @@ function generateBlocks() {
 
 //Advanced
 function generateBlocksInterval() {
-    const square = document.body.insertAdjacentHTML('afterbegin', '<div style = "width:250px;">' +
+    document.body.insertAdjacentHTML('afterbegin', '<div style = "width:250px;">' +
     '<div class="square"></div>'.repeat(25) + '</div>');
 
     setInterval(() => {
