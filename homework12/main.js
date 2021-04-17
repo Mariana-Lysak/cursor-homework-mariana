@@ -1,11 +1,11 @@
 async function getRandomChinese(length) {
     let result = ''; 
     for(let i = 0; i < length; i++) {
-        await new Promise((resolve) => {
+        await new Promise(resolve => {
             setTimeout(() => {
             const sign = Date.now().toString().slice(-5);
             result += String.fromCharCode(sign);
-            resolve()
+            resolve(result)
             }, 50)
         })
     }
