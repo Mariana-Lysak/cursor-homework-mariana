@@ -1,3 +1,4 @@
+
 function generateBlocks() {
     document.body.insertAdjacentHTML('afterbegin', '<div style = "width:250px;">' +
     '<div class="square"></div>'.repeat(25) + '</div>');
