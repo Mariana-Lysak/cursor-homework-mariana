@@ -1,15 +1,16 @@
+const promise = () => {
+    return new Promise(resolve => setTimeout(() => resolve(), 50));
+}
+
 async function getRandomChinese(length) {
     let result ='';
 
     for(let i = 0; i < length; i++) {
-        await new Promise(resolve => {
-            setTimeout (() => {
-                const sign = Date.now().toString().slice(-5);
-                result += String.fromCharCode(sign);
-                resolve(result);
-            }, 50);
-        });
+        const sign = Date.now().toString().slice(-5);
+        result += String.fromCharCode(sign);
+        await promise();
     }
+    
     console.log(result);
 }
 
