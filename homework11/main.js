@@ -8,54 +8,73 @@ const letterB = document.getElementById('letterB');
 const letterC = document.getElementById('letterC');
 const letterD = document.getElementById('letterD');
 
+const letters = document.querySelectorAll('div');
+const soungs = [];
+soungs.push(soungA, soungB, soungC, soungD);
+
+function removeLetters() {
+    for(let i = 0; i < letters.length; i++) {
+        letters[i].classList.remove('active');
+        soungs[i].pause();
+    }
+}
+
 letterA.addEventListener('click', event => {
-    letterA.classList.toggle('active');
+    removeLetters();
+    letterA.classList.add('active');
     soungA.currentTime = 0;
-    soungA.paused ? soungA.play() : soungA.pause();
+    soungA.play();
 });
 
 letterB.addEventListener('click', event => {
-    letterB.classList.toggle('active');
+    removeLetters();
+    letterB.classList.add('active');
     soungB.currentTime = 0;
-    soungB.paused ? soungB.play() : soungB.pause();
+    soungB.play();
 });
 
 letterC.addEventListener('click', event => {
-    letterC.classList.toggle('active');
+    removeLetters();
+    letterC.classList.add('active');
     soungC.currentTime = 0;
-    soungC.paused ? soungC.play() : soungC.pause();
+    soungC.play();
 });
 
 letterD.addEventListener('click', event => {
-    letterD.classList.toggle('active');
+    removeLetters();
+    letterD.classList.add('active');
     soungD.currentTime = 0;
-    soungD.paused ? soungD.play() : soungD.pause();
+    soungD.play();
 });
 
 
 document.addEventListener('keypress', playSoung);
 
 function playSoung() {
-    switch (event.key) {
-        case 'a':
-            letterA.classList.toggle('active');
+    switch (event.code) {
+        case 'KeyA':
+            removeLetters();
+            letterA.classList.add('active');
             soungA.currentTime = 0;
-            soungA.paused ? soungA.play() : soungA.pause();
+            soungA.play();
             break;
-        case 'b':
-            letterB.classList.toggle('active');
+        case 'KeyB':
+            removeLetters();
+            letterB.classList.add('active');
             soungB.currentTime = 0;
-            soungB.paused ? soungB.play() : soungB.pause();
+            soungB.play();
             break;
-        case 'c':
-            letterC.classList.toggle('active');
+        case 'KeyC':
+            removeLetters();
+            letterC.classList.add('active');
             soungC.currentTime = 0;
-            soungC.paused ? soungC.play() : soungC.pause();
+            soungC.play();
             break;
-        case 'd':
-            letterD.classList.toggle('active');
+        case 'KeyD':
+            removeLetters();
+            letterD.classList.add('active');
             soungD.currentTime = 0;
-            soungD.paused ? soungD.play() : soungD.pause();
+            soungD.play();
             break;
     };   
 };
