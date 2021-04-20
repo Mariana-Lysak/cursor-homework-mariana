@@ -1,6 +1,9 @@
 body {
     align-items: center;
     text-align: center;
-    background-color: midnightblue;
+    background-image:url('assets/16224-the-empire-strikes-back_1280x720.jpg');
 }
 
+input {
+    width: 10px;
+}
