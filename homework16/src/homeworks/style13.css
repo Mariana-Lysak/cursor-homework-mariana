@@ -1,0 +1,34 @@
+body {
+    align-items: center;
+    text-align: center;
+    background-image:url('assets/16224-the-empire-strikes-back_1280x720.jpg');
+}
+
+button {
+    width: 150px;
+    background-color: transparent;
+    color: thistle;
+    border: 2px solid;
+    margin: 10px;
+    outline: none;
+}
+
+.active{
+    transform: scale(1.1);
+    border-color: rgb(105, 86, 211);
+    box-shadow: 0 0 1rem #ffc600;
+}
+.person, .planet {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    background-color: rebeccapurple;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
